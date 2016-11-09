@@ -53,7 +53,7 @@ tranfer system operational.
 If you already have an agreement and are looking for technical information about programming the client side of the SWORD interaction,
 please have a look at our [client code examples]. 
 
-[client code examples]: https://github.com/DANS-KNAW/easy-sword2-dans-examples.
+[client code examples]: https://github.com/DANS-KNAW/easy-sword2-dans-examples
 
 
 TODO: 
