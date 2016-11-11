@@ -1,7 +1,7 @@
 DANS EASY Services
 ==================
 Welcome to the DANS EASY Services web page! DANS offers, through its Electronic Archiving SYstem (EASY), long-term
-data preservation services to scientific research community. Please, refer to the [DANS website] for more general
+data preservation services to the scientific research community. Please, refer to the [DANS website] for more general
 information about our organisation, services and activities.
 
 [DANS website]: https://www.dans.knaw.nl/en
@@ -38,28 +38,17 @@ EASY for long term preservation, automatically. The copy can either be a regular
 EASY Web-UI or a "dark archive" copy, which is findable through the EASY search interface, but will redirect the user to the 
 front-end archive for access to the data (i.e. the data will *not* be accessible through EASY).
 
-There are currently two versions of SWORD operational
+There are currently two versions of SWORD operational:
 
-* SWORD v1.3 - an older version of the SWORD protocol. It supports creating regular EASY datasets that are accessible and downloadable
-  through the Web-UI.
-* SWORD v2.0 - the latest version of the SWORD protocol. The EASY implementation currently only supports creating dark archive datasets,
-  though work is underway to extend the functionality.
+* **SWORD v1.3** - an older version of the SWORD protocol. It supports creating regular EASY datasets that are accessible and downloadable
+  through the Web-UI. See the *["SWORD Auto-Ingest Manual"]* for technical details.
+* **SWORD v2.0** - the latest version of the SWORD protocol. The EASY implementation currently only supports creating dark archive datasets,
+  though work is underway to make depositing downloadable datasets possible. See the page *["Depositing in EASY with SWORD 2.0"]* for technical details.
   
 #### How to connect your Repository System to EASY?
 If you are interested in using EASY as your back-end Trusted Digital Repository (TDR), please contact DANS at: info@dans.knaw.nl.
 Our SWORD account manager will then work with you to draw up the necessary agreements and guide you through the steps to making the 
 tranfer system operational.
-
-If you already have an agreement and are looking for technical information about programming the client side of the SWORD interaction,
-please have a look at our [client code examples]. 
-
-[client code examples]: https://github.com/DANS-KNAW/easy-sword2-dans-examples
-
-
-TODO: 
-
-* Document DDM (including special operational semantics for some dcmi-elements)
-* Document files.xml
 
 
 

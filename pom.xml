@@ -16,16 +16,17 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-       <groupId>nl.knaw.dans.shared</groupId>
-       <artifactId>dans-prototype</artifactId>
-       <version>1.35</version>
+        <groupId>nl.knaw.dans.shared</groupId>
+        <artifactId>dans-prototype</artifactId>
+        <version>1.35</version>
     </parent>
     <groupId>nl.knaw.dans.easy</groupId>
-    <artifactId>easy-doc</artifactId>
-    <name>EASY Services Documenation</name>
+    <artifactId>easy-public-doc</artifactId>
+    <name>EASY Services Documentation</name>
     <version>1.x-SNAPSHOT</version>
     <inceptionYear>2016</inceptionYear>
     <scm>
@@ -70,8 +71,18 @@
                 <configuration>
                     <headerHtmlFile>${project.basedir}/src/main/resources/html/header.html</headerHtmlFile>
                     <footerHtmlFile>${project.basedir}/src/main/resources/html/footer.html</footerHtmlFile>
-                    <copyDirectories>css,pdf</copyDirectories>
+                    <copyDirectories>css,pdf,img</copyDirectories>
                 </configuration>
+            </plugin>
+            <!-- Avoid build warning about generating empty jar -->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-jar</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
