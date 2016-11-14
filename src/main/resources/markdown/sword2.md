@@ -13,13 +13,13 @@ The following diagram details this a bit further.
 ![overview](img/sword2.png)
 
 1. Client creates a deposit package.
-2. Client sends deposit package to SWORD Service, getting back a URL te track the deposit's state.
+2. Client sends deposit package to SWORD Service, getting back a URL to track the deposit's state.
 3. SWORD Service unzips and validates deposit.
-4. EASY Ingest Flow performs checks and transformations and creates an dataset in Archival Storage.
+4. EASY Ingest Flow performs checks and transformations and creates a dataset in Archival Storage.
 5. EASY Ingest Flow reports back success of failure to SWORD Service.
 
 3-5. During this time the Client periodically checks the deposit state through the URL received in step 2. If the final state of `ARCHIVED` is
-reached, the how process is concluded successfully. Other outcomes may be `INVALID` (the package did not meet the requirements of the SWORD service) 
+reached, the process is concluded successfully. Other outcomes may be `INVALID` (the package did not meet the requirements of the SWORD service) 
 or `REJECTED` (the package did not meet the requirements of the EASY Ingest Flow).
 
 ### Example Code
