@@ -44,12 +44,14 @@ There are currently two versions of SWORD operational:
   through the Web-UI. See the *["SWORD Auto-Ingest Manual"]* for technical details.
 * **SWORD v2.0** - the latest version of the SWORD protocol. The EASY implementation currently only supports creating dark archive datasets,
   though work is underway to make depositing downloadable datasets possible. See the page *["Depositing in EASY with SWORD 2.0"]* for technical details.
-  
+
+["SWORD Auto-Ingest Manual"]: ./pdf/SWORD%20Auto-Ingest%20Manual.pdf
+["Depositing in EASY with SWORD 2.0"]: ./sword2.html
+
 #### How to connect your Repository System to EASY?
 If you are interested in using EASY as your back-end Trusted Digital Repository (TDR), please contact DANS at: info@dans.knaw.nl.
 Our SWORD account manager will then work with you to draw up the necessary agreements and guide you through the steps to making the 
 tranfer system operational.
-
 
 
 
