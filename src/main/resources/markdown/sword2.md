@@ -6,7 +6,7 @@ Overview
 Depositing in EASY via the SWORD v2.0 protocol is basically a two-phase process:
 
 1. Submitting a deposit for ingest.
-2. Tracking the state of the deposit as it goes it goes through the ingest-flow, until it reaches ARCHIVED status.
+2. Tracking the state of the deposit as it goes through the ingest-flow, until it reaches ARCHIVED status.
 
 The following diagram details this a bit further.
 
@@ -16,7 +16,7 @@ The following diagram details this a bit further.
 2. Client sends deposit package to SWORD Service, getting back a URL to track the deposit's state.
 3. SWORD Service unzips and validates deposit.
 4. EASY Ingest Flow performs checks and transformations and creates a dataset in Archival Storage.
-5. EASY Ingest Flow reports back success of failure to SWORD Service.
+5. EASY Ingest Flow reports back success or failure to SWORD Service.
 
 3-5. During this time the Client periodically checks the deposit state through the URL received in step 2. If the final state of `ARCHIVED` is
 reached, the process is concluded successfully. Other outcomes may be `INVALID` (the package did not meet the requirements of the SWORD service) 
@@ -37,8 +37,8 @@ From the [SWORD website]:
 > It stands for Simple Web-service Offering Repository Deposit and is a profile of the 
 > Atom Publishing Protocol (known as APP or ATOMPUB). 
 
-The [specifications of SWORD v2.0] builds on those of [Atom], and [AtomPub]. AtomPub in turn builds on
-[HTTP]. It is not necessary to gain thorough familiarity with all these specifications in order to build
+The [specifications of SWORD v2.0] build on those of [Atom] and [AtomPub]. AtomPub in turn builds on
+[HTTP]. It is, however, not necessary to have thorough familiarity with all these specifications in order to build
 a SWORD client for the DANS EASY SWORD v2.0 Service.   
 
 [SWORD website]: http://swordapp.org/about/
@@ -50,7 +50,7 @@ a SWORD client for the DANS EASY SWORD v2.0 Service.
 ### The EASY SWORD v2.0 Implementation
 
 The DANS SWORD v2.0 service uses our own implementation of the protocol. It is developed as open source software on GitHub.
-The [easy-sword2] project is intended as a generic component that may be used by other parties needing to host a deposit 
+The [easy-sword2] project is intended as a generic component that may be used by other parties that need to host a deposit 
 service. For the purpose of client development some parts of the `easy-sword2` documentation are required reading, especially
 [the section about its external interface].
 
@@ -98,18 +98,15 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
       Any other URI will cause the dataset to be rejected. Also, in this case the `dcterms:rightsHolder` element must be specified.
       Its element text will be filled in for the rights holder if required by the license.
     - If above attribute is not specified the element text itself is stored as the additional license.
+* There must be exactly one `dcterms:available` element with an ISO 8601 conformant date which specifies from what date on the 
+  dataset will be available for dissemination. To make the dataset available on publishing, specify the current date or some 
+  date in the past.
 * If the agreement between the depositing organization and DANS specifies that the depositor provides a resolvable DOI identifier, 
   exactly one such identifier must be specified using a `dcterms:identifier` element with the attribute `xsi:type="id-type:DOI"`
   in which the prefix `id-type` is mapped to the namespace `http://easy.dans.knaw.nl/schemas/vocab/identifier-type/`. In this case
   EASY will not generate a DOI for the dataset, but instead use to provided DOI to show a link to the current access point for the
   data.
-* ***TO BE IMPLEMENTED***: The client may specify that the deposit is an update for an existing dataset by including a `dcterms:replaces` 
-  element with an attribute `xsi:type="dcterms:URI"`. The URI thus provided must:
-  
-    - be a URI for the dataset (independent of revision) or of its latest revision
-    - point to a dataset that is owned by the depositor of the current deposit
- 
-  If these two conditions are not met, the deposit is rejected.
+
 
 [DANS Dataset Metadata XML schema]: https://easy.dans.knaw.nl/schemas/md/2016/ddm.xsd
 
