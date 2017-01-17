@@ -98,7 +98,7 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
       Any other URI will cause the dataset to be rejected. Also, in this case the `dcterms:rightsHolder` element must be specified.
       Its element text will be filled in for the rights holder if required by the license.
     - If above attribute is not specified the element text itself is stored as the additional license.
-* There must be exactly one `dcterms:available` element with an ISO 8601 conformant date which specifies from what date on the 
+* There must be exactly one `ddm:available` element with an ISO 8601 conformant date which specifies from what date on the 
   dataset will be available for dissemination. To make the dataset available on publishing, specify the current date or some 
   date in the past.
 * If the agreement between the depositing organization and DANS specifies that the depositor provides a resolvable DOI identifier, 
