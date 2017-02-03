@@ -19,9 +19,12 @@ Deposit Interfaces
 ------------------
 EASY offers two interfaces for depositing data: a web form, intended for direct user access, and a machine-machine
 interface that allows partner organisations of DANS to automatically deposit data packages from their front-end archives
-into EASY. The machine-machine interface implements the [SWORD-protocol].
+into EASY. The machine-machine interface implements the [SWORD-protocol]. 
+
+**Note**: More information about the handling of geographic coordinates by EASY can be found at the [geographic coordinates page]
 
 [SWORD-protocol]: http://swordapp.org/
+[geographic coordinates page]: ./GeographicCoordinates.html
 
 ### Web Form
 Users of EASY can directly access the [web form] to deposit their data in EASY. Data that is deposited in this way is 
