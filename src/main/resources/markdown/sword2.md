@@ -107,6 +107,9 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
   EASY will not generate a DOI for the dataset, but instead use to provided DOI to show a link to the current access point for the
   data.
 
+**Note**: More information about the handling of geographic coordinates can be found at the [geographic coordinates page]
+
+[geographic coordinates page]: ./GeographicCoordinates.html
 
 [DANS Dataset Metadata XML schema]: https://easy.dans.knaw.nl/schemas/md/2016/ddm.xsd
 
