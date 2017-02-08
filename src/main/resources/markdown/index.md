@@ -21,8 +21,6 @@ EASY offers two interfaces for depositing data: a web form, intended for direct 
 interface that allows partner organisations of DANS to automatically deposit data packages from their front-end archives
 into EASY. The machine-machine interface implements the [SWORD-protocol]. 
 
-**Note**: More information about the handling of geographic coordinates by EASY can be found at the [geographic coordinates page]
-
 [SWORD-protocol]: http://swordapp.org/
 [geographic coordinates page]: ./GeographicCoordinates.html
 

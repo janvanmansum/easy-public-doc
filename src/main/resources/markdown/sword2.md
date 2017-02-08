@@ -38,7 +38,7 @@ From the [SWORD website]:
 > Atom Publishing Protocol (known as APP or ATOMPUB). 
 
 The [specifications of SWORD v2.0] build on those of [Atom] and [AtomPub]. AtomPub in turn builds on
-[HTTP]. It is, however, not necessary to have thorough familiarity with all these specifications in order to build
+[HTTP]. It is, however, not necessary to have thorough familiarity with all of these specifications in order to build
 a SWORD client for the DANS EASY SWORD v2.0 Service.   
 
 [SWORD website]: http://swordapp.org/about/
@@ -107,8 +107,6 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
   EASY will not generate a DOI for the dataset, but instead use to provided DOI to show a link to the current access point for the
   data.
 
-**Note**: More information about the handling of geographic coordinates can be found at the [geographic coordinates page]
-
 [geographic coordinates page]: ./GeographicCoordinates.html
 
 [DANS Dataset Metadata XML schema]: https://easy.dans.knaw.nl/schemas/md/2016/ddm.xsd
@@ -129,4 +127,5 @@ following rules:
   This feature allows depositors to use more cryptic actual names (such as UUIDs) for their actual file names. 
 
 [DCTERMS]: http://www.dublincore.org/documents/dcmi-terms/
+
 
