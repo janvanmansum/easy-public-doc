@@ -67,7 +67,11 @@ into an archived dataset in EASY it must meet some additional requirements.
 In addition to being a valid bag (see [BagIt]) the package sent to the deposit service must meet the following
 criteria:
 
-* There must be a payload manifest that uses the SHA-1 algorithm.
+* There must be a payload manifest that uses the SHA-1 algorithm and contains a checksum for all payload files.
+* There must be a `bag-info.txt` with:
+    - an entry called `Created` with a valid ISO 8601 datetime, including a time zone
+    - optionally, an entry called `Is-Version-Of` with the `urn:uuid` URI of a dataset already archived, that is the
+      base version of a sequence of dataset versions.
 * The deposit must not contain computer viruses. If viruses are found, the deposit is rejected.
 * There must be a directory called `metadata` directly under the bag's base directory.
 * The `metadata` directory must contain exactly the following files:
