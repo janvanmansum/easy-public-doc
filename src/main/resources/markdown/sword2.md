@@ -68,9 +68,11 @@ In addition to being a valid bag (see [BagIt]) the package sent to the deposit s
 criteria:
 
 * There must be a payload manifest that uses the SHA-1 algorithm and contains a checksum for all payload files.
-* There must be a `bag-info.txt` with:
-    - an entry called `Created` with a valid ISO 8601 datetime, including a time zone
-    - optionally, an entry called `Is-Version-Of` with the `urn:uuid` URI of a dataset already archived, that is the
+* There must be a [`bag-info.txt`]. The EASY Ingest Flow reserves two additional elements for its own use:
+    - a required element called `Created` which must contain a valid ISO 8601 datetime, including a time zone.
+      This datetime should record the time at which the version of the dataset being deposited was created in the
+      front-end archive.
+    - an optional element called `Is-Version-Of` with the `urn:uuid` URI of a dataset already archived, that is the
       base version of a sequence of dataset versions.
 * The deposit must not contain computer viruses. If viruses are found, the deposit is rejected.
 * There must be a directory called `metadata` directly under the bag's base directory.
@@ -81,6 +83,7 @@ criteria:
 
 
 [BagIt]: https://tools.ietf.org/html/draft-kunze-bagit#section-3
+[`bag-info.txt`]: https://tools.ietf.org/html/draft-kunze-bagit#section-2.2.2
 
 #### Structure and Semantics of `dataset.xml`
 The `dataset.xml` describes the dataset as a whole. It must comply with the [DANS Dataset Metadata XML schema]. In addition:
