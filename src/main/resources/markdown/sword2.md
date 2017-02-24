@@ -69,9 +69,9 @@ criteria:
 
 * There must be a payload manifest that uses the SHA-1 algorithm and contains a checksum for all payload files.
 * There must be a [`bag-info.txt`]. The EASY Ingest Flow reserves two additional elements for its own use:
-    - a required element called `Created` which must contain a valid ISO 8601 datetime, including a time zone.
-      This datetime should record the time at which the version of the dataset being deposited was created in the
-      front-end archive.
+    - a required element called `Created` which must contain a valid ISO 8601 datetime, including a time zone and
+      with a precision of milliseconds (for example: `2016-11-12T23:41:11.512+01:00`). This datetime should record the 
+      time at which the version of the dataset being deposited was created in the front-end archive.
     - an optional element called `Is-Version-Of` with the `urn:uuid` URI of a dataset already archived, that is the
       base version of a sequence of dataset versions.
 * The deposit must not contain computer viruses. If viruses are found, the deposit is rejected.
