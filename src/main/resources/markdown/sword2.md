@@ -94,13 +94,18 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
   
     - If the `dcterms:license` element contains the attribute `xsi:type="dcterms:URI"` then the element text must be one of the
       following Open Source license URI's:
-        * [http://creativecommons.org/publicdomain/zero/1.0/](http://creativecommons.org/publicdomain/zero/1.0/)
+        * [http://creativecommons.org/publicdomain/zero/1.0](http://creativecommons.org/publicdomain/zero/1.0)
         * [http://creativecommons.org/licenses/by/4.0](http://creativecommons.org/licenses/by/4.0)
+        * [http://creativecommons.org/licenses/by-nc-sa/3.0](http://creativecommons.org/licenses/by-nc-sa/3.0)
+        * [http://creativecommons.org/licenses/by-nc/3.0](http://creativecommons.org/licenses/by-nc/3.0)
         * [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
         * [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
         * [http://opensource.org/licenses/BSD-3-Clause](http://opensource.org/licenses/BSD-3-Clause)
         * [http://opensource.org/licenses/BSD-2-Clause](http://opensource.org/licenses/BSD-2-Clause)
         * [http://www.gnu.org/licenses/gpl-3.0.en.html](http://www.gnu.org/licenses/gpl-3.0.en.html)
+        * [http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt](http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt)
+        * [http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt](http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt)
+        * [http://www.tapr.org/TAPR_Open_Hardware_License_v1.0.txt](http://www.tapr.org/TAPR_Open_Hardware_License_v1.0.txt)
       
       Any other URI will cause the dataset to be rejected. Also, in this case the `dcterms:rightsHolder` element must be specified.
       Its element text will be filled in for the rights holder if required by the license.
