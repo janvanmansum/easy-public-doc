@@ -7,7 +7,7 @@
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-            http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,22 +16,28 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>nl.knaw.dans.shared</groupId>
         <artifactId>dans-prototype</artifactId>
-        <version>1.35</version>
+        <version>1.53</version>
     </parent>
+
     <groupId>nl.knaw.dans.easy</groupId>
     <artifactId>easy-public-doc</artifactId>
+    <version>1.2.0-SNAPSHOT</version>
+
     <name>EASY Services Documentation</name>
-    <version>1.x-SNAPSHOT</version>
     <inceptionYear>2016</inceptionYear>
+
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
         <tag>HEAD</tag>
     </scm>
+
     <dependencies>
         <dependency>
             <groupId>com.ruleoftech</groupId>
@@ -39,6 +45,7 @@
             <version>0.10</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -85,4 +92,48 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>rpm</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+                <file>
+                    <exists>/usr/local/bin/rpm</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>rpm-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-rpm</id>
+                                <goals>
+                                    <goal>attached-rpm</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <group>Applications/Archiving</group>
+                            <mappings combine.self="override">
+                                <mapping>
+                                    <directory>/var/www/html/doc</directory>
+                                    <sources>
+                                        <source>
+                                            <location>src/main/assembly/dist</location>
+                                        </source>
+                                        <source>
+                                            <location>${project.build.directory}/html</location>
+                                        </source>
+                                    </sources>
+                                </mapping>
+                            </mappings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
