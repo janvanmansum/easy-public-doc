@@ -126,6 +126,8 @@
                         </executions>
                         <configuration>
                             <group>Applications/Archiving</group>
+                            <defaultUsername>root</defaultUsername>
+                            <defaultGroupname>root</defaultGroupname>
                             <mappings combine.self="override">
                                 <mapping>
                                     <directory>/var/www/html/doc</directory>
