@@ -27,14 +27,14 @@
 
     <groupId>nl.knaw.dans.easy</groupId>
     <artifactId>easy-public-doc</artifactId>
-    <version>1.2.0-beta-1</version>
+    <version>1.2.0-SNAPSHOT</version>
 
     <name>EASY Services Documentation</name>
     <inceptionYear>2016</inceptionYear>
 
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
-        <tag>v1.2.0-beta-1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencies>
