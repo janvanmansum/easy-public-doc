@@ -131,7 +131,7 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
 
 [geographic coordinates page]: ./GeographicCoordinates.html
 
-[DANS Dataset Metadata XML schema]: https://easy.dans.knaw.nl/schemas/md/2016/ddm.xsd
+[DANS Dataset Metadata XML schema]: https://easy.dans.knaw.nl/schemas/md/ddm/ddm.xsd
 
 #### Structure and Semantics of `files.xml`
 
