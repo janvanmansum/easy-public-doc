@@ -135,7 +135,7 @@ The `dataset.xml` describes the dataset as a whole. It must comply with the [DAN
 
 #### Structure and Semantics of `files.xml`
 
-`files.xml` describes the payload files of the deposited package. There is currently no XML schema for it. It must comply with the
+`files.xml` describes the payload files of the deposited package. In addition to the [files XML schema] it must comply with the
 following rules:
 
 * The document element must be `files`.
@@ -147,6 +147,8 @@ following rules:
 * Each `file` element may contain any number of other DCTERMS elements describing the file.
 * If the `file` element contains a `dcterms:title` element the text of that element will be used as the file name in the EASY Web-UI presentation. 
   This feature allows depositors to use more cryptic actual names (such as UUIDs) for their actual file names. 
+
+[files XML schema]: https://easy.dans.knaw.nl/schemas/bag/metadata/files/files.xsd
 
 [DCTERMS]: http://www.dublincore.org/documents/dcmi-terms/
 
