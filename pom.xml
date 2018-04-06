@@ -103,6 +103,9 @@
             <build>
                 <plugins>
                     <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                    </plugin>
+                    <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>rpm-maven-plugin</artifactId>
                         <configuration>
@@ -124,6 +127,14 @@
                                 </mapping>
                             </mappings>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-rpm</id>
+                                <goals>
+                                    <goal>attached-rpm</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
