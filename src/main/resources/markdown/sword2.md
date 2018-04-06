@@ -73,7 +73,8 @@ criteria:
       with a precision of milliseconds (for example: `2016-11-12T23:41:11.512+01:00`). This datetime should record the 
       time at which the version of the dataset being deposited was created in the front-end archive.
     - an optional element called `Is-Version-Of` with the `urn:uuid` URI of a dataset already archived, that is the
-      base version of a sequence of dataset versions.
+      base version of a sequence of dataset versions. (**Note that you should *not* use the UUID of a deposit that is
+      still waiting to be processed.**)
 * The deposit must not contain computer viruses. If viruses are found, the deposit is rejected.
 * There must be a directory called `metadata` directly under the bag's base directory.
 * The `metadata` directory must contain exactly the following files:
